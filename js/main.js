@@ -5,6 +5,7 @@ const theButtons = document.querySelectorAll("#buttonHolder img");
 const puzzleBoard = document.querySelector(".puzzle-board");
 const puzzlePieces = document.querySelectorAll(".puzzle-pieces img");
 const dropZones = document.querySelectorAll(".drop-zone");
+const puzzlePieceDiv = document.querySelector(".puzzle-pieces");
 let draggedPiece;
 
 //functions
@@ -14,6 +15,10 @@ function changeBGImage(event) {
     //console.log(this.id);
     //background-image: url('../images/backGround0.jpg');
     // puzzleBoard.style.backgroundImage = `url('./images/backGround${this.id}.jpg')`;
+
+       //fix goes here
+
+       puzzlePieces.forEach(piece => puzzlePieceDiv.appendChild(piece));
 
     //Method 2
     console.log(event.currentTarget.id);
