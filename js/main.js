@@ -31,6 +31,9 @@ function handleOver(e) {
 }
 
 function handleDrop() {
+    if (this.children.length >= 1) {
+        return; // Exit the function if there is already a puzzle piece in the drop zone
+    }
     this.appendChild(draggedPiece);
 }
 
